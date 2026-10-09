@@ -106,11 +106,10 @@ export default async function handler(req, res) {
 
     // 2) Lead novo: cria na pipeline Hospital Med
     if (!leadId) {
-      const tags = [{ name: 'hospitalmed' }, { name: 'isca-quanto-sobra' }, { name: SEGMENT_TAGS[segment] }];
-      if (CONTAB_TAGS[contab]) tags.push({ name: CONTAB_TAGS[contab] });
+      const tags = [{ name: 'hospitalmed' }];
 
       const leadPayload = {
-        name: `HospitalMed · ${name}`,
+        name: `${name} · HospitalMed`,
         pipeline_id: PIPELINE_ID,
         ...(STATUS_ID ? { status_id: STATUS_ID } : {}),
         _embedded: {
