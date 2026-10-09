@@ -1,0 +1,6 @@
+{
+  "name": "hospitalmed-isca",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" }
+}
